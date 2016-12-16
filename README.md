@@ -2,13 +2,11 @@
 
 # Introduction #
 
-This is repository that contains labs 5 and 6 for Cloud Native XWeeks
+This is repository that contains labs material for Cloud Native XWeeks
 
 ----
 ### Lab 1-4 ###
-Link here
-Link to PDFs
-Link to VM
++ [Official external Cloud Native DevOps workshop](cloud-native-devopps/README.md)Link here
 
 ### Lab 5 ###
 
