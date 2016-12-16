@@ -53,3 +53,4 @@ Enter or copy the *https://github.com/oracle/cloud-native-devops-workshop.git* r
 
 Now click **Finish** to create the project and to clone the specified repository.
 
+Continue with  [Create continuous build integration using Oracle Developer Cloud Service and Oracle Application Container Cloud Service](../springboot-sample/devcs.accs.ci.md)
