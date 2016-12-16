@@ -10,7 +10,7 @@ All helper videos and cheatsheets that might be useful as well as VM that will b
 We downloaded all PDFs that you will use
 
 + [Lab1](CloudWorkshop_CloudNative_100_v1.3.pdf)
-+ [Lab2](CloudWorkshop_CloudNative_200_v1.3.pdf)
-+ [Lab3](CloudWorkshop_CloudNative_300_v1.3.pdf)
++ [Lab2](CloudWorkshop_CloudNative_200_v1.4.pdf)
++ [Lab3](CloudWorkshop_CloudNative_300_v1.4.pdf)
 + [Lab4](CloudWorkshop_CloudNative_400_v1.3.pdf)
 
