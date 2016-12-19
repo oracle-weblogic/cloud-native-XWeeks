@@ -10,7 +10,7 @@ Your labs will not work if replication policy on Storage Cloud Service is not se
 + Login to your cloud account
 + Select on the dashboard Storage Cloud Service
 + Open a Service Console
-+ Clink in top line into RED link "Set Replication Policy" (If you miss this link it means your replication policy was set in advance)
++ Clink in the top line into RED link "Set Replication Policy" (If you miss this link it means your replication policy was set in advance)
 + Click "Set"
 + Click "Coonfirm"
 
