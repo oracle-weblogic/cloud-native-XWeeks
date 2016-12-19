@@ -309,6 +309,8 @@ In the details page you can see the *Topology* and the raw content of the *Templ
 
 ![](images/27.topology.png)
 
+### Create Stack using Stack template ###
+
 Now create stack using the imported , custom stack template. Click the drop down menu icon in the **FixItFast-Stack** template row on the right side and select **Create Stack** menu item.
 
 ![](images/28.create.stack.png)
@@ -350,4 +352,48 @@ Discover the FixItFast application.
 
 ![](images/37.fixitfast.dashboard.png)
 
-You have completed the Oracle Cloud Stack lab!
+### Modify data directly in the MySQL Cloud Service database ###
+
+To check dependencies the last task in this lab is to modify data directly in the database and check changes using FixItFast application.
+
+First check the customer list using FixItFast application. Click on the menu icon what can be found in the top left corner. In the navigation menu select **Customers**
+
+![](images/38.fixitfast.open.customer.png)
+
+Note the first customer's name. In this demo it is *Bob Smith*. You will update this name to confirm backend dependency.
+
+![](images/39.customers.png)
+
+Go back to the Application Container Cloud Console page find the *backendJava* application and open it's URL.
+
+![](images/40.backendjava.url.png)
+
+The *backendJava* application's home page is displayed. basically this components just provides REST access to customer data persisted in MySQL Cloud Service database. So these pages are just for demo purposes. Click **MySQL database query/update** link.
+
+![](images/41.mysql.app.png)
+
+Using this page you can modify any customer data. The default values for connection string and credentials are populated from service bindings so do not change those values. The only thing what is missing the SQL statement for update. Enter or copy the following DML statement: 
+	
+	update customers set firstname='Bobby' where firstname='Bob'
+
+Click **Execute**.
+
+![](images/42.update.stmt.png)
+
+As a result you can see the statement what you have entered and the number which shows how many rows were affected. It has to be 1. 
+
+![](images/43.update.result.png)
+
+To refresh customer list go to the FixItFast application and click the menu icon at the top left corner and select e.g. **Incidents**.
+
+![](images/44.go.back.incidents.png)
+
+Now go back to the customer list using the menu icon again.
+
+![](images/38.fixitfast.open.customer.png)
+
+In the customer list you have to see the updated name: **Bobby Smith**
+
+![](images/45.updated.customer.png)
+
+Congratulations! You have completed the Oracle Cloud Stack lab.
