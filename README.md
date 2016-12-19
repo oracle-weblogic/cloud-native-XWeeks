@@ -2,7 +2,17 @@
 
 # Introduction #
 
-This is repository that contains labs material for Cloud Native XWeeks
+This is repository that contains labs material for Cloud Native XWeeks.
+
+## Important to verify before you start ##
+
+Your labs will not work if replication policy on Storage Cloud Service is not set. To set replication policy you need:
++ Login to your cloud account
++ Select on the dashboard Storage Cloud Service
++ Open a Service Console
++ Clink in top line into RED link "Set Replication Policy" (If you miss this link it means your replication policy was set in advance)
++ Click "Set"
++ Click "Coonfirm"
 
 ----
 ### Lab 1-4 ###
