@@ -15,6 +15,10 @@ Your labs will not work if replication policy on Storage Cloud Service is not se
 + Click "Confirm"
 
 ----
+
+PLEASE DON'T USE ORACLE VPN FOR THESE LABS. If you are using Oracle office please connect to clear-guest network BEFORE you import VM image
+
+----
 ### Lab 1-4 ###
 + [Official external Cloud Native DevOps workshop](cloud-native-devops/README.md)
 
