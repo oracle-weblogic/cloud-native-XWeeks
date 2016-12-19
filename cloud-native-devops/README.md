@@ -5,7 +5,7 @@
 Lab 1 - 4 are going to be based on official tutorial how to complete microservice cloud native project. 
 The general description of that prokject you find [here] (http://launch.oracle.com/?cloudnative). Please familiarize with the general concept of the workshop
 
-All helper videos and cheatsheets that might be useful as well as VM that will be needed for that part of the workshop you may find [here] (https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc)
+All helper videos and cheatsheets that might be useful as well as VM that will be needed for that part of the workshop you may find [here] (https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) or from [here] (https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)
 
 We downloaded all PDFs that you will use
 
