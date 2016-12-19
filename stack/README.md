@@ -6,7 +6,7 @@ Oracle Cloud Stack Manager is a feature of Oracle Cloud that allows for the prov
 In this tutorial you will learn how to quickly provision a group of related Oracle Cloud resources with Oracle Cloud Stack Manager.
 You will use Cloud Stack Manager and a custom Oracle stack template to provision Oracle MySQL Cloud Service instance and multiple Oracle Application Container Cloud Services.
 
-The FixItFast Cloud Native Applications requires the following services:
+The FixItFast Cloud Native Application requires the following services:
 
 - MySQL Database service for customer data
 - JavaSE (Spring Boot) REST service to access customer data persisted by MySQL Database service
@@ -31,7 +31,7 @@ This tutorial demonstrates how to:
 
 #### Create Oracle Developer Cloud Service project ####
 
-Sign in to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console** to open Oracle Developer Cloud Services console.
+Sign in to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then click **My Services** and provide your identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console** to open Oracle Developer Cloud Services console.
 ![](images/01.dashboard.png)
 
 Click **+ New Project** button to create a new project.
@@ -141,8 +141,213 @@ In case of build failure you can find the problem easily here in the log. If the
 
 ![alt text](images/20.build.console.png)
 
+### Create custom Stack template ###
+
+A template in Oracle Cloud Stack Manager defines the cloud services that are part of a stack as well as how they are provisioned in Oracle Cloud. They act like blueprints for the creation of cloud environments.
+
+A template is comprised of several elements:
+
+- *Resources* define the cloud services to create and the dependencies between them.
+- *Resource parameters* control how the resources are created through the service’s public REST APIs.
+- *Resource attributes* enable you to use the runtime characteristics of one resource as parameters for the creation of another resource.
+- *Template parameters* allow users of the template to customize the template for a specific cloud stack.
+- *Template attributes* customize the monitoring information that is displayed for stacks created from this template.
+
+Templates are authored using the YAML standard syntax and then imported into Oracle Cloud Stack Manager. You can rapidly provision similar environments, in the same cloud data center or in different ones, by creating multiple stacks from a single template. After a stack is created from a template, its lifecycle is completely independent from the template’s lifecycle. In other words, modifications you make to the template will not affect existing cloud stacks.
+
+Open your favourite text editor and copy or enter the following content into a new text file and save as *fixitfast-stack.yaml*.
+
+	---
+	  template: 
+	    templateName: FixItFast-Stack
+	    templateVersion: 1.0.0
+	    templateDescription: Stack template to create simple ACCS 
+	    parameters: 
+	      adminPwd: 
+	        label: Admin password
+	        description: Generic password for service administrators
+	        type: String
+	        mandatory: true
+	        default: WebLogic1!
+	        sensitive: true    
+	      appFrontEndURL: 
+	        label: Front End App archive cloud URL
+	        description: Location inside Storage from where the frontend app archive can be downloaded from
+	        type: String
+	        mandatory: true
+	        default: xweek/fixitfast-client.zip
+	      appBackEndNodeURL: 
+	        label: Back End Node App archive cloud URL
+	        description: Location inside Storage from where the backend node app archive can be downloaded from
+	        type: String
+	        mandatory: true
+	        default: xweek/fixitfast-backend.zip
+	      appBackEndJavaURL: 
+	        label: Back End Java App archive cloud URL
+	        description: Location inside Storage from where the backend java app archive can be downloaded from
+	        type: String
+	        mandatory: true
+	        default: xweek/fixitfast-java-mysql-backend.zip
+	      publicKeyText: 
+	        label: Public key text
+	        description: Public key text for accessing the provisioned vms
+	        type: ssh
+	        mandatory: true
+	        default: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC99Kr9t7GE7IqRE6SSoqB1eNd7kFd5snU086io1/NGIt+/1tFzcNI3R7A2L5wJPkK8EYbOR5Z2cu+vzYsSRSZBVd76lqqln8K7HGazEx73wQuIXuTB7CzbBvf0sxO/33IF8N0iw2BKtVffbf205FPGQJVmQHmfJD8KWCFnrqGt8kD/goN+cLT1SJL6GDaypykxY0AoYhyPbbLAq7YkuptJt2j+fhTD4vyLXjZ2QjykMJVuz0YDfDl07xUbL1/mmIDqtImY5KWPeADBU1rqHD3WDaUvIrbRyHa9E0kT4e7IEwdqFVFABCbxIwcPCRgyAFfxsP9HS1G75zG7VpIeKbpD rsa-key-20161106204053"
+	        sensitive: true
+	    resources: 
+	      mysqlDB: 
+	        type: MySQLCS
+	        parameters: 
+	             serviceParameters: 
+	                serviceName: fixitMySQLDB
+	                serviceLevel: PAAS
+	                subscription: HOURLY
+	                serviceDescription: Customer Database for FixItFast application 
+	                serviceVersion: 5.7
+	                vmPublicKeyText: 
+	                    Fn::GetParam: publicKeyText                
+	                backupDestination: NONE
+	             componentParameters: 
+	                mysql: 
+	                  shape: oc3
+	                  mysqlUserName: root
+	                  mysqlUserPassword:
+	                    Fn::GetParam: adminPwd
+	      backendJavaApp: 
+	        type: apaas
+	        parameters: 
+	            name: backendJava
+	            runtime: java
+	            subscription: MONTHLY
+	            archiveURL:
+	                Fn::GetParam: appBackEndJavaURL
+	            deployment:
+	                memory: 2G
+	                instances: 1
+	                services: 
+	                      - 
+	                        identifier: MySQLBinding
+	                        name: 
+	                          Fn::GetAtt: 
+	                            - mysqlDB
+	                            - serviceName
+	                        type: MySQLCS
+	                        username: root
+	                        password:
+	                          Fn::GetParam: adminPwd
+	      backendNodeApp:
+	        type: apaas
+	        parameters: 
+	            name: backendNode
+	            runtime: node
+	            subscription: MONTHLY
+	            archiveURL:
+	                Fn::GetParam: appBackEndNodeURL
+	            deployment:
+	                memory: 1G
+	                instances: 1
+	                services:
+	      clientApp:
+	        type: apaas
+	        parameters: 
+	            name: client
+	            runtime: node
+	            subscription: MONTHLY
+	            archiveURL:
+	                Fn::GetParam: appFrontEndURL
+	            deployment:
+	                memory: 1G
+	                instances: 1
+	                services:
+	                environment:
+	                  {
+	                    "REST_FIXIT" :  { "Fn::GetAtt" : [ "backendNodeApp", "attributes.webURL.value" ] },
+	                    "REST_CUSTOMERS" :  { "Fn::GetAtt" : [ "backendJavaApp", "attributes.webURL.value" ] }
+	                  }
+
+Please spend few minutes and try to understand this configuration format. Files that contain YAML documents can use any file extension but *.yaml* is a typical convention. The first line in the file identifies it as a YAML document by using 3 dashes.
+
+At the beginning you can find the Name, Version and Description of the template. The second part is for the parameters. There you can defined parameters which is necessary to create stack (services) using default values what you can override during stack creation. As you can see in this template we defined the artifacts location on the storage cloud container where the previous build job has uploaded. We also defined default usernam and password for MySQL Cloud Service database and public ssh key to access the underlaying container. In this tutorial it is not necessary to use ssh connection thus we don't provide the private pair of the public key defined in template.
+
+The third main part is about the resources what are the service definitions. We have defined the following services:
+
+1. *mysqlDB* - MySQL Cloud Service
+2. *backendJavaApp* - Application Container Cloud Service hosting JavaSE depends on *mysqlDB*
+3. *backendNodeApp* - Application Container Cloud Service hosting NodeJS
+4. *clientApp* - Application Container Cloud Service hosting NodeJS depends on *backendNodeApp* and *backendJavaApp*
+
+Please note the dependencies and how it's parameters dynamically defined. For example the *backendJavaApp* needs to get the MySQL Service connection string and credentials which is done by Service Bindings and parameter usage. Or the *clientApp* needs to know the REST endpoints of *backendNodeApp* and *backendJavaApp*. For more clear picture scroll up to the beginning of the this guide and review the FixItFast Cloud Native Application architecture.
+
 ### Import custom Stack template to Oracle Cloud Stack Manager ###
 
+Open a new browser tab or window and use the [sign in](https://cloud.oracle.com/sign-in) page to access your dashboard again. Select your datacenter click **My Services** then provide your identity domain and credentials (if necessary, because in same browser SSO session should still alive). After a successful login you will see your Dashboard. Find the Application Container tile and click the hamburger icon. In the dropdown menu click **Open Service Console** to open Oracle Application Container Cloud Services console.
 
+![](images/21.accs.console.png)
 
+On the Application Container Cloud Service Console click the drop down menu icon next to the console title and select **Oracle Cloud Stack**.
 
+![](images/22.open.stack.manager.png)
+
+On the Oracle Cloud Stack console page select the **Template** tab and click **Import** to import your custom stack template. As you can see Stack templates are already available in the template list. These certified, Oracle-defined templates address popular use cases and deployment patterns. You do not have to import these templates into Oracle Cloud Stack Manager to begin using them. However, you can export an Oracle template, customize its definition to meet your requirements, and then import it back into Oracle Cloud Stack Manager as a new template.
+
+![](images/23.import.template.png)
+
+Find the *fixitfast-stack.yaml* template file what you have created using the text editor on your desktop. Click **Import**.
+
+![](images/24.browse.yaml.png)
+
+If the validation succeded then Oracle Cloud Stack imports the template. Click OK on the message dialog.
+
+![](images/25.imported.png)
+
+Now click the name of the newly created **FixItFast-Stack** template.
+
+![](images/26.template.details.png)
+
+In the details page you can see the *Topology* and the raw content of the *Template* file. You can Export the yaml file for further usage, but now click **Done** to close the detail page.
+
+![](images/27.topology.png)
+
+Now create stack using the imported , custom stack template. Click the drop down menu icon in the **FixItFast-Stack** template row on the right side and select **Create Stack** menu item.
+
+![](images/28.create.stack.png)
+
+The Create New Oracle Cloud Stack — Details page is displayed. Enter *FixItFast-application* as **Name**  and optional **Description** for the stack. Do not select **On Failure Retain Resources** otherwise the stack creation fails, any resources that were created will not be automatically deleted.
+The rest of the parameters are specific to the template you imported. If you haven't changed the storage container build parameter and the stack template configuration file you can accept the default values. Click **Next**.
+
+![](images/29.stack.details.png)
+
+The Create New Oracle Cloud Stack — Confirmation page is displayed. Review the values you provided for the template parameters and click **Confirm** to create your stack.
+
+![](images/30.confirm.png)
+
+To check the stack status by services go back to the **Stacks** page and click the FixItFast-application stack.
+
+![](images/31.creating.stack.png)
+
+Using this page (click refresh icon after every few minutes) you can get information about the  status of services what are being created by this stack. Please note during the *fixitMySQLDB* creation the stack also started to create *backendNode* component because there is no dependency between them. But the *backendJava* and *client* components need to wait for *fixitMySQLDB* completion since they use that service. The longest part is the MySQL service creation which should not be longer than 15 minutes.
+
+![](images/32.stack.in.progress.png)
+
+When all the services are up and running you need to go to the Application Container Cloud Console to get the *client* application's URL. To do so click any of the Application Container Cloud Service in the stack. For example *client* service.
+
+![](images/33.stack.ready.png)
+
+The Application Container Cloud Service console page is displayed. Select the *client* application and click it's URL.
+
+![](images/34.accs.console.png)
+
+The FixItFast application is opened in a new browser tab or window. Click **Skip**.
+
+![](images/35.fixitfast.skip.png)
+
+Leave the default credentials and click **Sign In**.
+
+![](images/36.fixitfast.signin.png)
+
+Discover the FixItFast application.
+
+![](images/37.fixitfast.dashboard.png)
+
+You have completed the Oracle Cloud Stack lab!

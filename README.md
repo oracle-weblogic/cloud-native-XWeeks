@@ -10,9 +10,7 @@ This is repository that contains labs material for Cloud Native XWeeks
 
 ### Lab 5 ###
 
-####Enhance Cloud native projects with Oracle MySQL Cloud Service binding and Stack Manager####
-+ MySQL
-+ Stack manager
++ [Deploy complex cloud environment using Oracle Cloud Stack Manager](stack/README.md)
 
 ### Lab 6 ###
 
