@@ -42,7 +42,7 @@ Log in to Oracle Developer Cloud Services and create a new project.
 
 ![alt text](images/02.new.project.png)
 
-Enter the name of the project and set the desired properties. Click **Next** and select *Initial Repository* as template.
+Enter the **springboot-sample** as the name of the project and set the desired properties. Click **Next** and select *Initial Repository* as template.
 
 ![](images/03.select.template.png)
 
