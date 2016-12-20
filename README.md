@@ -16,7 +16,10 @@ Your labs will not work if replication policy on Storage Cloud Service is not se
 
 ----
 
-PLEASE DON'T USE ORACLE VPN FOR THESE LABS. If you are using Oracle office please connect to clear-guest network BEFORE you import VM image
+RECOMMENDED NETWORK:
++ IT WAS REPORTED THAT clear-guest NETWORK IS BLOCKING PORTS AND PROTOCOLS - PLEASE DON'T USE IT!
++ If You use clear netowrk or VPN please open VPN BEFORE launching VM inside VirtualBox. While you work with VM don't change netowrk on the host - every time you do so you need to restart the VM. While you are in VPN please set up properly settings according to [Lab2 document] (cloud-native-devops/CloudWorkshop_CloudNative_200_v1.4.pdf) page 68 / step 27 - 
++ If you make your lab outside Oracle Netowrk - please don't use VPN
 
 ----
 ### Lab 1-4 ###
