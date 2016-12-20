@@ -121,7 +121,7 @@ Quick explanation to the script. As you can see from the comments the script fir
 
 ![alt text](images/15.all.build.steps.png)
 
-To archive artifact in Developer Cloud Service too, change to **Post Build** tab and check in the **Archive the artifacts** option. Enter __\\\*\*/.zip\*__ into **Files To Archive** field. Finally click **Save** to update the new job configurations.
+To archive artifact in Developer Cloud Service too, change to **Post Build** tab and check in the **Archive the artifacts** option. Enter __\*\*/\*.zip__ into **Files To Archive** field. Finally click **Save** to update the new job configurations.
 
 ![alt text](images/16.post.build.png "Post build")
 
