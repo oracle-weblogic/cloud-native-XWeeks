@@ -113,7 +113,7 @@ Other option is to fire a new Build Job execution which will deploy artifact aft
 
 ![alt text](images/15.build.now.png "Build Now") 
 
-Both way deploys Spring Boot sample application on Application Container Cloud Service. You can check the deployment result on the **Deploy** page. Once the deploy is ready (this may take a while) click the **Deploy to ACCS** link.
+Both way deploys Spring Boot sample application on Application Container Cloud Service. You can check that the deployment was successful by clicking the link on the Deployments page following **Deploy to ACCS**. The Deployment may take even up to 5 minutes.
 
 ![alt text](images/16.deploy.ready.png "Deploy ready")
 
@@ -125,7 +125,7 @@ The Spring Boot sample application main page should look like this.
 
 ![alt text](images/18.sample.app.png "Sample Application")
 
-There are many other option to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.
+There are many other options to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.
 
 ### + Optional step: Make changes in the application ###
 
