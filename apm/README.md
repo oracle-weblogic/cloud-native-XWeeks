@@ -9,8 +9,6 @@ Oracle Application Performance Monitoring Cloud Service is a software-as-a servi
 
 ![](images/apm.architecture.png)
 
-By incorporating metrics and telemetry into your DevOps and continuous delivery pipeline,
-
 In this tutorial, we will integrate APM into a continuous delivery flow to automatically incorporate the setup and installation of the APM agent during the build process, to ensure that we have continuous telemetry. Using the Application Performance Monitoring Web User Interface you can monitor all necessary details about the demo application.
 
 Once this is setup, the APM will be introduced into the application automatically during the build  and we will be able to get telemetry without further thinking about the process of deploying agents.
