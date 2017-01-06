@@ -68,7 +68,7 @@ On the left menu select **Download** and click on the green download icon.
 
 Save the AgentInstall.zip file.
 
-Locate a **valid** registration key with a large maximum that we will use for agent deployment. Click **Registration Keys** on the left side menu. Copy-paste your Registration Key value into your notes for AGENT_REGISTRATION_KEY.
+Locate a **valid** registration key with a large maximum that we will use for agent deployment. Click **Registration Keys** on the left side menu. Copy-paste your Registration Key value into your notes for AGENT_REGISTRATION_KEY. (If it is available please choose a key "RnnDsWj-zzlAqhPfbaho7haLsD")
 ![](images/05.read.reg.key.png)
 
 #### Upload Build Artifacts to Maven ####
