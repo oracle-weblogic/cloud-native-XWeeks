@@ -6,6 +6,8 @@ This is repository that contains labs material for Cloud Native XWeeks.
 
 ## Important to verify before you start ##
 
+##### SET STORAGE REPLICATION POLICY IN ADVANCE
+
 Your labs will not work if replication policy on Storage Cloud Service is not set. To set replication policy you need:
 + Login to your cloud account
 + Select on the dashboard Storage Cloud Service
@@ -16,10 +18,11 @@ Your labs will not work if replication policy on Storage Cloud Service is not se
 
 ----
 
-RECOMMENDED NETWORK:
-+ IT WAS REPORTED THAT clear-guest NETWORK IS BLOCKING PORTS AND PROTOCOLS - PLEASE DON'T USE IT!
-+ If You use clear netowrk or VPN please open VPN BEFORE launching VM inside VirtualBox. While you work with VM don't change netowrk on the host - every time you do so you need to restart the VM. While you are in VPN please set up properly settings according to [Lab2 document] (cloud-native-devops/CloudWorkshop_CloudNative_200_v1.4.pdf) page 68 / step 27
-+ If you make your lab outside Oracle Network - please don't use VPN
+##### NETWORK SETTINGS
+
++ The ***clear-guest*** NETWORK IS BLOCKING PORTS AND PROTOCOLS. **PLEASE DON'T USE *clear-guest* network!**
++ If you make your lab **outside Oracle Network**, please **don't use VPN!**
++ In case of ***clear* network through VPN** or inside Oracle Network please **configure the proxy settings** properly using [this guide](common/README.md). Please note while you work with VM it is not recommended to change network on the host - every time you do so you need to restart the VM or it's network layer.
 
 ----
 ### Lab 1-4 ###
