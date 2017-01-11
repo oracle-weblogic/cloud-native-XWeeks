@@ -22,7 +22,7 @@ Your labs will not work if replication policy on Storage Cloud Service is not se
 
 + The ***clear-guest*** NETWORK IS BLOCKING PORTS AND PROTOCOLS. **PLEASE DON'T USE *clear-guest* network!**
 + If you make your lab **outside Oracle Network**, please **don't use VPN!**
-+ In case of ***clear* network through VPN** or inside Oracle Network please **configure the proxy settings** properly using [this guide](common/README.md). Please note while you work with VM it is not recommended to change network on the host - every time you do so you need to restart the VM or it's network layer.
++ In case of ***clear* network through VPN** or inside Oracle Network please **configure the proxy settings** properly using [this guide](common/proxy.settings.md). Please note while you work with VM it is not recommended to change network on the host - every time you do so you need to restart the VM or it's network layer.
 
 ----
 ### Lab 1-4 ###
