@@ -1,6 +1,6 @@
   {
     "runtime": {
-        "majorVersion": "6.3"
+        "majorVersion": "6"
     },
     "command": "node web.js"
   }
