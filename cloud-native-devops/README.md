@@ -11,6 +11,6 @@ We downloaded all PDFs that you will use
 
 + [Lab1](CloudWorkshop_CloudNative_100_v1.3.pdf)
 + [Lab2](CloudWorkshop_CloudNative_200_v1.4.pdf)
-+ [Lab3](CloudWorkshop_CloudNative_300_v1.4.pdf) - you might experience issues with copy pasting graphics.js file from pdf. We prepared for you downloadable fiel [graphics.js] (graphics.js)
++ [Lab3](CloudWorkshop_CloudNative_300_v1.4.pdf) - you might experience issues with copy pasting graphics.js file from pdf. We prepared for you downloadable file [graphics.js] (graphics.js)
 + [Lab4](CloudWorkshop_CloudNative_400_v1.3.pdf) 
 
