@@ -7,10 +7,10 @@ The general description of that project you find [here] (http://launch.oracle.co
 
 All helper videos and cheatsheets that might be useful as well as VM that will be needed for that part of the workshop you may find [here] (https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) or from [here] (https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)
 
-We downloaded all PDFs that you will use
+[The table of content for the Cloud Native Microservice workshop](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/README.md)
 
-+ [Lab1](CloudWorkshop_CloudNative_100_v1.3.pdf)
-+ [Lab2](CloudWorkshop_CloudNative_200_v1.4.pdf)
-+ [Lab3](CloudWorkshop_CloudNative_300_v1.4.pdf) - you might experience issues with copy pasting graphics.js file from pdf. We prepared for you downloadable file [graphics.js] (graphics.js)
-+ [Lab4](CloudWorkshop_CloudNative_400_v1.3.pdf) 
++ [Lab1](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative100.md)
++ [Lab2](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative200.md)
++ [Lab3](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative300.md)
++ [Lab4](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative400.md) 
 
