@@ -43,7 +43,7 @@ This tutorial demonstrates how to:
 
 #### Open Oracle Developer Cloud Service Project ####
 
-[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
+[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. (USE DEVCS DOMAIN CREDENTIALS). After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 ![](images/01.dashboard.png)
 
 Select your Oracle Developer Cloud Service Project which was created using inital Git repository and contains Spring Boot sample application's sources.
@@ -97,7 +97,7 @@ Set the following properties.
 
 - **Configuration Name**: any name to identify deployment configuration
 - **Application Name**: instance name in ACCS. This will determine the application's URL.
-- **Deployment Target**: click **New** and select Application Container Cloud... and define connection properties such as **Data center**, **Identity Domain** and **credentials**. 
+- **Deployment Target**: click **New** and select Application Container Cloud... and define connection properties such as **Data center**, **Identity Domain** and **credentials**. (USE ACCS DOMAIN CREDENTIALS)
 ![alt text](images/13.accs.config.png "ACCS Configuration")
 - **Type**: select **Automatic** which means auto deploy after a successful execution of the build job. Select your previously created job and its artifact to deploy.
 
@@ -113,11 +113,11 @@ Other option is to fire a new Build Job execution which will deploy artifact aft
 
 ![alt text](images/15.build.now.png "Build Now") 
 
-Both way deploys Spring Boot sample application on Application Container Cloud Service. You can check that the deployment was successful by clicking the link on the Deployments page following **Deploy to ACCS**. The Deployment may take even up to 5 minutes.
+Both way deploys Spring Boot sample application on Application Container Cloud Service. You can check that the deployment was successful by logging to the dashboard with ACCS DOMAIN CREDENTIALS and selecting Service Console on Application Container Cloud Service.  The Deployment may take even up to 5 minutes.
 
 ![alt text](images/16.deploy.ready.png "Deploy ready")
 
-This opens the Application Container Cloud Services console. You should see your Spring Boot sample application in the list. Click the application's URL to test.
+ You should see your Spring Boot sample application in the list. Click the application's URL to test.
 
 ![alt text](images/17.accs.console.png "ACCS Console")
 
