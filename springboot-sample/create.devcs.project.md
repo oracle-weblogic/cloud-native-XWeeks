@@ -35,7 +35,7 @@ This tutorial demonstrates how to:
 
 #### Create Oracle Developer Cloud Service project ####
 
-Sign in to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
+Sign in to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. (USE DEVCS DOMAIN CREDENTIALS) After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 ![](images/01.dashboard.png)
 
 Log in to Oracle Developer Cloud Services and create a new project.
