@@ -56,7 +56,7 @@ The master installer is the starting point for all client-side Oracle Management
 
 Download the master installer for your tenant and make note of a valid registration key. We will incorporate these into our build process to automatically deploy the agent.
 
-[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign_in](https://cloud.oracle.com) and go to Dashboard Page. Click **Launch APM**.
+[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign_in](https://cloud.oracle.com) and go to Dashboard Page. (USE APM DOMAIN CREDENTIALS). Click **Launch APM**.
 
 If you have separate Oracle Management Cloud Service access, for example in case of trial use the proper identity domain and credentials to login.
 
