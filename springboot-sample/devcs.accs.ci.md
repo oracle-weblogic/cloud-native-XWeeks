@@ -97,7 +97,7 @@ Set the following properties.
 
 - **Configuration Name**: any name to identify deployment configuration
 - **Application Name**: instance name in ACCS. This will determine the application's URL.
-- **Deployment Target**: click **New** and select Application Container Cloud... and define connection properties such as **Data center**, **Identity Domain** and **credentials**. (USE ACCS DOMAIN CREDENTIALS)
+- **Deployment Target**: click **New** and select Application Container Cloud... and define connection properties such as **Data center**, **Identity Domain** and **credentials**. (USE ACCS_DOMAIN ACCS_USER ACCS_PWD)
 ![alt text](images/13.accs.config.png "ACCS Configuration")
 - **Type**: select **Automatic** which means auto deploy after a successful execution of the build job. Select your previously created job and its artifact to deploy.
 
