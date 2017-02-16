@@ -1,5 +1,18 @@
 ![](../common/images/header.png)
 
+
+#### BEFORE YOU START
+
+Please collect following data - we will use two different identity domains during the labs so please collect following:
++ DevCS Identity domain - ..................................(DEVCS_DOMAIN)
++ DevCS User(s) - .......cloud.adminXX.............. (DEVCS_USER)
++ DevCS Password - ..................................(DEVCS_PWD)
++ ACCS Identity domain - ..................................(ACCS_DOMAIN)
++ ACCS User(s) - .......cloud.admin................ (ACCS_USER)
++ ACCS Password - ..................................(ACCS_PWD)
+
+----
+
 # Introduction #
 
 Lab 1 - 4 are going to be based on official tutorial how to complete microservice cloud native project. 
