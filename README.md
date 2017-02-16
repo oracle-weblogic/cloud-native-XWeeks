@@ -12,6 +12,18 @@ This is repository that contains labs material for Cloud Native XWeeks.
 + If you make your lab inside Oracle Network infrastructure please don't utilize the network dedicated to non-Oracle employees. Please **configure the proxy settings** properly using [this guide](common/proxy.settings.md). Please note while you work with VM it is not recommended to change network on the host - every time you do so you need to restart the VM or it's network layer.
 
 ----
+
+#### BEFORE YOU START
+
+Please collect following data - we will use two different identity domains during the labs so please collect following:
++ DevCS Identity domain - ..................................(DEVCS_DOMAIN)
++ DevCS User(s) - .......cloud.adminXX.............. (DEVCS_USER)
++ DevCS Password - ..................................(DEVCS_PWD)
++ ACCS Identity domain - ..................................(ACCS_DOMAIN)
++ ACCS User(s) - .......cloud.admin................ (ACCS_USER)
++ ACCS Password - ..................................(ACCS_PWD)
+
+----
 ### Lab 1-4 ###
 + [Official external Cloud Native DevOps workshop](cloud-native-devops/README.md)
 
