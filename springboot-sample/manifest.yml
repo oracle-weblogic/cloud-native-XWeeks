@@ -1,0 +1,8 @@
+---
+applications:
+  - name: springpong
+    host: my-cool-springboot-cfdemo
+    buildpack: java_buildpack
+    path: target/springbootdemo-0.0.1.war
+    memory: 1024M
+    domain: cfapps.io

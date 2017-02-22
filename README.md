@@ -16,16 +16,17 @@ This is repository that contains labs material for Cloud Native XWeeks.
 #### BEFORE YOU START
 
 Please collect following data - we will use two different identity domains during the labs so please collect following:
-+ DevCS Identity domain - ..................................(DEVCS_DOMAIN)
-+ DevCS User(s) - .......cloud.adminXX.............. (DEVCS_USER)
-+ DevCS Password - ..................................(DEVCS_PWD)
-+ ACCS Identity domain - ..................................(ACCS_DOMAIN)
-+ ACCS User(s) - .......cloud.admin................ (ACCS_USER)
-+ ACCS Password - ..................................(ACCS_PWD)
+
++ DevCS Identity domain (referred as **DEVCS_DOMAIN**) 
++ DevCS User(s) (**DEVCS_USER**) - *cloud.adminXX*
++ DevCS Password (**DEVCS_PWD**) - belongs to *cloud.adminXX*
++ ACCS Identity domain (**ACCS_DOMAIN**)
++ ACCS User(s) (**ACCS_USER**) - *cloud.admin*
++ ACCS Password (**ACCS_PWD**) - belongs to *cloud.admin* 
 
 ----
 ### Lab 1-4 ###
-+ [Official external Cloud Native DevOps workshop](cloud-native-devops/README.md)
++ [Cloud Native DevOps workshop](cloud-native-devops/README.md)
 
 ### Lab 5 ###
 

@@ -3,27 +3,90 @@
 
 #### BEFORE YOU START
 
-Please collect following data - we will use two different identity domains during the labs so please collect following:
-+ DevCS Identity domain - ..................................(DEVCS_DOMAIN)
-+ DevCS User(s) - .......cloud.adminXX.............. (DEVCS_USER)
-+ DevCS Password - ..................................(DEVCS_PWD)
-+ ACCS Identity domain - ..................................(ACCS_DOMAIN)
-+ ACCS User(s) - .......cloud.admin................ (ACCS_USER)
-+ ACCS Password - ..................................(ACCS_PWD)
+You will use two different identity domains during the labs. One for *Development Cloud Service* (DevCS) which holds the project and one for *Application Container Cloud Service* (ACCS) which is the deployment target and runs the application(s). So first please collect the following account information:
+
++ DevCS Identity domain (referred as **DEVCS_DOMAIN**) 
++ DevCS User(s) (**DEVCS_USER**) - *cloud.adminXX*
++ DevCS Password (**DEVCS_PWD**) - belongs to *cloud.adminXX*
++ ACCS Identity domain (**ACCS_DOMAIN**)
++ ACCS User(s) (**ACCS_USER**) - *cloud.admin*
++ ACCS Password (**ACCS_PWD**) - belongs to *cloud.admin* 
 
 ----
+## IMPORTANT: How to prepare for this workshop
 
-# Introduction #
+**First**, ***Get an Oracle Cloud Account*** 
+- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
+    - For some workshop events, cloud environments will be provided. 
+    - For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](http://cloud.oracle.com/tryit) 
+    - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
+        
+**Second**, ***Configure your Client Environment***
+- Your client enviroment **must be configured prior** to attempting the Hands-on-Workshop labs. 
+- You have two options for configuring your workshop client environment. 
+     - ***Option 1:*** You can install Virtual Box and [download](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) ([alternative location](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)) and run a pre-configured **Virtual Box Image**.
+     - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
+- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
+      
+## How to View the Lab Guides
 
-Lab 1 - 4 are going to be based on official tutorial how to complete microservice cloud native project. 
-The general description of that project you find [here] (http://launch.oracle.com/?cloudnative). Please familiarize with the general concept of the workshop
+- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle-weblogic.github.io/cloud-native-XWeeks/cloud-native-devops) 
 
-All helper videos and cheatsheets that might be useful as well as VM that will be needed for that part of the workshop you may find [here] (https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) or from [here] (https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)
+- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
+    ![](images/WorkshopMenu.png)  
+- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
 
-[The table of content for the Cloud Native Microservice workshop](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/README.md)
+## DevOps and Cloud Native Microservices Workshop
 
-+ [Lab1](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative100.md)
-+ [Lab2](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative200.md)
-+ [Lab3](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative300.md)
-+ [Lab4](https://github.com/oracle/cloud-native-devops-workshop/blob/master/microservices/CloudNative400.md) 
+This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - youwill create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
+## Workshop Details
+
+**Reference the following Lab Guides by opening their Documentation Files:**
+
+## Lab 100: Agile Project Management
+
+**Documenation**: [CloudNative100.md](CloudNative100.md)
+
+### Objectives
+
+- Create Initial Project
+    - Add Users to Project
+- Create Product Issues
+    - Create Issues for Twitter Feed Microservice
+    - Create Issues for Twitter Feed Marketing UI
+- Create Agile Board and initial Sprint
+- Add Issues to Sprint
+
+## Lab 200: Continuous Delivery of Java Microservices
+
+**Documenation**: [CloudNative200.md](CloudNative200.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Import Code from external Git Repository
+- Import Project into Eclipse
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+
+## Lab 300: Cloud Native Rapid Javascript Devlopment with node.js
+
+**Documenation**: [CloudNative300.md](CloudNative300.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Import Code from external Git Repository
+- Import Project into Brackets
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+
+## Lab 400:  Cloud Native Develper Cloud Service Administration
+
+**Documenation**: [CloudNative400.md](CloudNative400.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Complete Sprint
+- Run Backlog and Sprint Reports
+- Review Administrative Tasks
