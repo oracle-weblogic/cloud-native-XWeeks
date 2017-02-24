@@ -18,7 +18,7 @@ You will use two different identity domains during the labs. One for *Developmen
 ***Configure your Client Environment***
 - Your client enviroment **must be configured prior** to attempting the Hands-on-Workshop labs. 
 - You need to  install Virtual Box and [download](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) ([alternative location](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)) and run a pre-configured **Virtual Box Image**.
-- If YOU WORK BEHIND FIREWALL YU MUST CONFIGURE PROXIES BASED ON THAT [CONFIGURE PROXY DOCUMENT](../common/proxy.settings.md). ***Please follow this instruction *** prior to attempting the Labs. 
+- If YOU WORK BEHIND FIREWALL YOU MUST CONFIGURE PROXIES BASED ON THAT [CONFIGURE PROXY DOCUMENT](../common/proxy.settings.md). ***Please follow this instruction *** prior to attempting the Labs. 
       
 ## How to View the Lab Guides
 
