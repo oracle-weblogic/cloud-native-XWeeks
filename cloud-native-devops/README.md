@@ -14,19 +14,11 @@ You will use two different identity domains during the labs. One for *Developmen
 
 ----
 ## IMPORTANT: How to prepare for this workshop
-
-**First**, ***Get an Oracle Cloud Account*** 
-- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
-    - For some workshop events, cloud environments will be provided. 
-    - For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](http://cloud.oracle.com/tryit) 
-    - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
         
-**Second**, ***Configure your Client Environment***
+***Configure your Client Environment***
 - Your client enviroment **must be configured prior** to attempting the Hands-on-Workshop labs. 
-- You have two options for configuring your workshop client environment. 
-     - ***Option 1:*** You can install Virtual Box and [download](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) ([alternative location](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)) and run a pre-configured **Virtual Box Image**.
-     - ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both **Option 1 and 2 are documented** in the [Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
+- You need to  install Virtual Box and [download](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFA6E9C5DD9A6A3B91918DD4F6C3FF17C1177E4725F3/folder/FA218231C01821A99BDADFCEF6C3FF17C1177E4725F3/_CloudNativeMicroservicesWorkshop/nameasc) ([alternative location](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)) and run a pre-configured **Virtual Box Image**.
+- If YOU WORK BEHIND FIREWALL YU MUST CONFIGURE PROXIES BASED ON THAT [CONFIGURE PROXY DOCUMENT](Proxy.md). ***Please follow this instruction *** prior to attempting the Labs. 
       
 ## How to View the Lab Guides
 
