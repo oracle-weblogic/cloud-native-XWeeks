@@ -177,7 +177,7 @@ Now that we have successfully built our project, we need to create a deployment 
 
     ![](images/200/Picture33.png)  
 
-- Enter the following data:
+- Enter the following data: (Use **ACCS_DOMAIN** here!!!!!)
 
   - **Data Center**: `<Your Assigned Datacenter>` ***(Ask instructor if needed)***
 
@@ -241,9 +241,9 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/200/Picture41.3.png)  
 
-### **STEP 8**: Login to Oracle Application Container Cloud Service
+### **STEP 8**: Login to Oracle Application Container Cloud Service 
 
-- Return to the Developer Service Cloud Dashboard tab if it’s still available, then select the Dashboard icon to return to the Oracle Public Cloud Dashboard. Note: It’s possible that you may be required to once again login, if the session has expired.
+- Logout in the Cloud Console and login to ACCS_DOMAIN 
 
     ![](images/200/Picture42.png)  
 
