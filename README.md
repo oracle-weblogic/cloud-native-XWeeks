@@ -24,6 +24,9 @@ Please collect following data - we will use two different identity domains durin
 + ACCS User(s) (**ACCS_USER**) - *cloud.admin*
 + ACCS Password (**ACCS_PWD**) - belongs to *cloud.admin* 
 
+The diagram below shows how to find DevCS domain (GREEN ARROW) and ACCS domain (RED ARROW)
+![](common/images/XWeeks.accounts.png)
+
 ----
 ### Lab 1-4 ###
 + [Cloud Native DevOps workshop](cloud-native-devops/README.md)
