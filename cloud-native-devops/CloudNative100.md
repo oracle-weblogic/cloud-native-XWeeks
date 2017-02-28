@@ -35,13 +35,13 @@ Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you. (During XWeeks all accounts are in *us2* data center)
 
     ![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
+    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email. (Take DEVCS_DOMAIN value)
 
     ![](images/100/Picture100-3.png)
 
