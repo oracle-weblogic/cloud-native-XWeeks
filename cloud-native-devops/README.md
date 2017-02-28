@@ -12,6 +12,9 @@ You will use two different identity domains during the labs. One for *Developmen
 + ACCS User(s) (**ACCS_USER**) - *cloud.admin*
 + ACCS Password (**ACCS_PWD**) - belongs to *cloud.admin* 
 
+The diagram below shows how to find DevCS domain (GREEN ARROW) and ACCS domain (RED ARROW)
+![](../common/images/XWeeks.accounts.png)
+
 ----
 ## IMPORTANT: How to prepare for this workshop
         
