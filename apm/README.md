@@ -145,6 +145,13 @@ You should land on a sample single-page web app, and see in the Network tab of t
 
 Click on the various samples on this page to see what they do.
 
+#### Generate Load ####
+To generate a reasonable amount of data, do the following about 4-5 times per minute over a period of 5-10 minutes:
++ Click on the different buttons on the page.
++ Click the **Compute* button a few extra times
++ Try entering `1048576` into **Return Array Index** and see what comes back when you press **Compute**.
++ Reload the page and do the above sequence a few more times
+
 #### Set Up Application Performance Monitoring ####
 
 [Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign_in](https://cloud.oracle.com) and go to Dashboard Page. Click **Launch APM**.
@@ -157,36 +164,11 @@ Once you have reached the Oracle Cloud Management Cloud Welcome page click **App
 Now you can see the landing page of APM. This is a dashboard which contains the top metrics. Click the hamburger icon on the left side next to the **Home** text.
 ![](images/16.apm.home.png)
 
-Click the last **Administration** menu item.
-![](images/16.apm.home.admin.png)
-
-Click the **Application definitions** menu item.
-![](images/17.apm.home.admin.application.png)
-
-Here you can define new application definition. This definition ensures that your application(s) will have a single pane view. Click **Create Application Definition**.
-![](images/18.apm.app.def.png)
-
-On the Application Specification dialog define the criteria which is unique to your application or environment. We will use the customized *URI Prefix* that we chose earlier as the identifier for our application. The Application Name can be anything but it is useful to use similar name to context path. Please note the Application Name can not contain '-'. Select **Pages** for criteria and choose **URL**. The pattern for URL should be *URI Prefix* from your notes. Check your application URL in the browser to find the right context path/criteria. Click **OK** for the criteria and then **Save** the Application Definition.
-![](images/19.app.spec.criteria.png)
-
-Now go back to the Applications page using the left side menu. Click the hamburger icon and select the **Back** arrow then the **Applications** menu item.
-![](images/20.back.to.applications.png)
-
-![](images/20.back.to.applications.2.png)
-
-Now you should see your newly defined Applications. Create some load (Ctrl+Refresh the applications page) on your applications to get some statistics.
-![](images/21.applications.png)
-
-#### Generate Load ####
-To generate a reasonable amount of data, do the following about 4-5 times per minute over a period of 5-10 minutes:
-+ Click on the different buttons on the page.
-+ Click the **Compute* button a few extra times
-+ Try entering `1048576` into **Return Array Index** and see what comes back when you press **Compute**.
-+ Reload the page and do the above sequence a few more times
-
 #### Use APM to Understand Application Behavior ####
-Navigate back into your application in APM, and set the time frame to the last 15 minutes:
-![](images/apm-time.png)
+Open the navigation menu and select pages. You can see all of the pages for APM. Filter the page data by your URI Prefix and set the time frame to the last 15 minutes:
+![](images/APMPageFilter.png)
+
+You can see the pages for your specific application. Similarlly you can filter requests by deployment and only see the requests for your deployment. 
 
 Try use the product and navigate the APM UI answer the following questions:
 
